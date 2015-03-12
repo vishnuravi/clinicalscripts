@@ -12,48 +12,29 @@ def calc_delta_ratio(ag, hco3):
 	"""Calculate Delta Ratio"""
 	return (ag-12.0)/(24.0-hco3)
 
-def get_na():
-	while True:	
+def get_float(min, max, prompt):
+	while True:
 		try:
-			na = float(raw_input("Sodium (mEq/L): "))
+			value = float(raw_input(prompt))
 		except ValueError:
 			print "Please enter a number."
+		except KeyboardInterrupt:
+			print "\n"
+			exit(0)
 		else:
-			if 80.0 <= na <= 200.0:
-				return na
+			if min <= value <= max:
+				return value
 				break
 			else:
-				print "Value must be between 80.0 and 200.0 mEq/L."
+				print "Value must be between " + str(min) + " and " + str(max) + "."
 
-def get_cl():
-	while True:	
-		try:
-			cl = float(raw_input("Chloride (mEq/L): "))
-		except ValueError:
-			print "Please enter a number."
-		else:
-			if 60.0 <= cl <= 180.0:
-				return cl
-				break
-			else:
-				print "Value must be between 60.0 and 180.0 mEq/L."
-
-def get_hco3():
-	while True:	
-		try:
-			hco3 = float(raw_input("Bicarbonate (mEq/L): "))
-		except ValueError:
-			print "Please enter a number."
-		else:
-			return hco3
-			break
 
 def main():
 	print "\nAnion Gap Calculator"
 	print "---------------------------"
-	na = get_na()
-	cl = get_cl()
-	hco3 = get_hco3()
+	na = get_float(80, 200, "Sodium (mEq/L): ")
+	cl = get_float(60, 180, "Chloride (mEq/L): ")
+	hco3 = get_float(0, 60, "Bicarbonate (mEq/L): ")
 	print "---------------------------"
 
 	anion_gap = calc_anion_gap(na, cl, hco3)
