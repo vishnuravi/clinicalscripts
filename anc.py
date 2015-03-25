@@ -36,6 +36,18 @@ def get_percent(prompt):
 			else:
 				return value
 
+def neutropenia_category(anc):
+	if anc < 500:
+		neutropenia = "Severe Neutropenia"
+	elif anc < 1000:
+		neutropenia = "Moderate Neutropenia"
+	elif anc < 1500:
+		neutropenia = "Mild Neutropenia"
+	else:
+		neutropenia = "No Neutropenia"
+
+	return neutropenia
+
 
 def main():
 	print "\nAbsolute Neutrophil Count"
@@ -44,7 +56,8 @@ def main():
 	pmn = get_percent("Percent Segmented Neutrophils (%): ")
 	bands = get_percent("Percent Bands (%): ")
 	anc = calc_anc(wbc, pmn, bands)
-	print "\nAbsolute Neutrophil Count is " + str(anc) + " x 10^3/uL\n"
+	print "\nAbsolute Neutrophil Count is {} x 10^3/uL ({})".format(str(anc), neutropenia_category(anc)) 
+
 
 
 if __name__ == "__main__": main()
