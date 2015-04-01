@@ -7,6 +7,7 @@ These scripts were designed for educational purposes. They should not be used al
 
 |Formula|Script|Description|
 |---|---|---|
+|APGAR Score|apgar.py|Used to assess the health of newborns|
 |Anion Gap|ag.py|Calculates anion gap, delta gap, and delta ratio|
 |Absolute Neutrophil Count|anc.py|Calculates total number of neutrophil granulocytes present in blood|
 |Corrected Calcium|cc.py|Corrects calcium for hypoalbuminemia|
