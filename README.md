@@ -11,6 +11,7 @@ These scripts were designed for educational purposes. They should not be used al
 |Anion Gap|ag.py|Calculates anion gap, delta gap, and delta ratio|
 |Absolute Neutrophil Count|anc.py|Calculates total number of neutrophil granulocytes present in blood|
 |Corrected Calcium|corrected_ca.py|Corrects calcium for hypoalbuminemia|
+|Corrected Sodium|corrected_na.py|Corrects sodium for hyperglycemia|
 |Centor Criteria|centor.py|Estimates the probability of streptococcal pharyngitis|
 |CURB-65|curb-65.py|Predicts mortality of community acquired pneumonia|
 |Light's Criteria|light.py|Identifies if pleural effusion is exudative|
