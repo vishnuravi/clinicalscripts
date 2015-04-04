@@ -15,6 +15,7 @@ These scripts were designed for educational purposes. They should not be used al
 |Centor Criteria|centor.py|Estimates the probability of streptococcal pharyngitis|
 |CURB-65|curb-65.py|Predicts mortality of community acquired pneumonia|
 |Light's Criteria|light.py|Identifies if pleural effusion is exudative|
+|Mean Arterial Pressure|map.py|Calculates the average arterial pressure during a cardiac cycle|
 |Rapid Shallow Breathing Index|rsbi.py|Calculates rapid shallow breathing index|
 |Serum-Ascites Albumin Gradient|saag.py|Determines the cause of ascites|
 |Winter's Formula|winter.py|Calculates metabolic acidosis compensation|
