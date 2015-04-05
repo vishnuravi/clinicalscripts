@@ -4,7 +4,7 @@
 def calc_rsbi(resp_rate, tidal_volume):
     return resp_rate/tidal_volume
 
-def get_float(min, prompt):
+def get_float(prompt, min=0):
     while True:
         try:
             value = float(raw_input(prompt))
@@ -17,13 +17,13 @@ def get_float(min, prompt):
                 return value
                 break
             else:
-                print "Value must be greater than 0."
+                print "Value must be greater than {}.".format(min)
 
 def main():
     print "\nRapid Shallow Breathing Index"
     print "-----------------------------"
-    resp_rate = get_float(0, "Patient's Respiratory Rate (breaths/min): ")
-    tidal_volume = get_float(0, "Patient's Tidal Volume (L): ")
+    resp_rate = get_float("Patient's Respiratory Rate (breaths/min): ")
+    tidal_volume = get_float("Patient's Tidal Volume (L): ")
     score = calc_rsbi(resp_rate, tidal_volume)
     print "\nRapid Shallow Breathing Index is {} breaths/min/L".format(score)
 

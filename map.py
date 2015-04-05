@@ -30,5 +30,7 @@ def main():
 	dbp = get_float("Diastolic Blood Pressure (mm Hg): ")
 	print "\nMean Arterial Pressure: {} mm Hg".format(int(calc_map(sbp, dbp)))
 
+    print "\nA mean arterial pressure of >= 60 mm Hg is thought to be needed to maintain adequate tissue perfusion."
+
 if __name__ == '__main__':
 	main()
