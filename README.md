@@ -14,6 +14,7 @@ These scripts were designed for educational purposes. They should not be used al
 |Corrected Sodium|corrected_na.py|Corrects sodium for hyperglycemia|
 |Centor Criteria|centor.py|Estimates the probability of streptococcal pharyngitis|
 |CURB-65|curb-65.py|Predicts mortality of community acquired pneumonia|
+|FENa|fena.py|Fractional excretion of sodium|
 |Light's Criteria|light.py|Identifies if pleural effusion is exudative|
 |Mean Arterial Pressure|map.py|Calculates the average arterial pressure during a cardiac cycle|
 |Rapid Shallow Breathing Index|rsbi.py|Calculates rapid shallow breathing index|

@@ -4,7 +4,7 @@
 def calc_anc(wbc, pmn, bands):
     return 10*wbc*(pmn+bands)
 
-def get_float(min, prompt):
+def get_float(prompt, min=0):
     while True:
         try:
             value = float(raw_input(prompt))
@@ -14,8 +14,8 @@ def get_float(min, prompt):
             print "\n"
             exit(0)
         else:
-            if value < 0:
-                print "This value cannot be less than 0."
+            if value < min:
+                print "This value cannot be less than {}.".format(min)
             else:
                 return value
 
@@ -50,7 +50,7 @@ def neutropenia_category(anc):
 
 def main():
     print "\nAbsolute Neutrophil Count", "\n-----------------------------"
-    wbc = get_float(0, "WBC Count (in 1000s): ")
+    wbc = get_float("WBC Count (in 1000s): ")
     pmn = get_percent("Percent Segmented Neutrophils (%): ")
     bands = get_percent("Percent Bands (%): ")
     anc = calc_anc(wbc, pmn, bands)
